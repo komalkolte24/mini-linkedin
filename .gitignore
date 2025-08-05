@@ -1,0 +1,21 @@
+# Root level .gitignore for both frontend and backend
+
+# Ignore node_modules in all folders
+**/node_modules
+
+# Ignore build folders
+**/build
+
+# Ignore env files
+**/.env
+**/.env.*
+
+# Vercel and other hosting configs
+.vercel
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System files
+.DS_Store
