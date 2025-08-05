@@ -1,4 +1,3 @@
-
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -18,12 +17,12 @@ const postRoutes = require("./routes/post");
 app.use("/api/auth", authRoutes);
 app.use("/api/posts", postRoutes);
 
-// Test route
+// ✅ Root route for Render deployment check
 app.get("/", (req, res) => {
-  res.send("API is working");
+  res.send("✅ Mini LinkedIn backend is running on Render!");
 });
 
-// MongoDB connection
+// 🔗 MongoDB connection
 const MONGO_URI = process.env.MONGO_URI;
 
 if (!MONGO_URI) {
