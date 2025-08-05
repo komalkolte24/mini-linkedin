@@ -10,8 +10,11 @@ app.use(cors());
 console.log("📦 Server is starting...");
 
 // 👉 Register routes
-const authRoutes = require("./routes/auth");
-const postRoutes = require("./routes/post");
+const authRoutes = require("./server/routes/auth");
+const postRoutes = require("./server/routes/post");
+
+//const authRoutes = require("./routes/auth");
+//const postRoutes = require("./routes/post");
 
 // 👉 Use routes
 app.use("/api/auth", authRoutes);
