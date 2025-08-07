@@ -5,7 +5,7 @@ const router = express.Router(); // ✅ THIS WAS MISSING
 //const User = require("../models/user");
 const User = require("../models/user");
 
-///const User = require("../../models/user");
+///const User = require("../../models/User");
 
 
 // Get user by ID
