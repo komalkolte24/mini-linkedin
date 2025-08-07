@@ -3,7 +3,9 @@ const express = require("express");
 const router = express.Router(); // ✅ THIS WAS MISSING
 
 //const User = require("../models/user");
-const User = require("../../models/user");
+const User = require("../models/user");
+
+///const User = require("../../models/user");
 
 
 // Get user by ID
