@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const instance = axios.create({
-  baseURL: "http://localhost:5000/api", // Your backend API base URL
+const axiosInstance = axios.create({
+  baseURL: "https://mini-linkedin-backend-nojm.onrender.com/api", // 👈 backend Render URL
 });
 
 export default instance;
