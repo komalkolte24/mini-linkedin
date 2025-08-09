@@ -3,7 +3,41 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
-const app = express();
+const app = express();const allowedOrigins = [
+  "http://localhost:3000", // local frontend
+  "https://client-lyuwmxo4o-komal-koltes-projects.vercel.app" // tumhara Vercel frontend URL
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("CORS policy: Not allowed"));
+    }
+  },
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  credentials: true
+}));
+const allowedOrigins = [
+  "http://localhost:3000", // local frontend
+  "https://client-lyuwmxo4o-komal-koltes-projects.vercel.app" // tumhara Vercel frontend URL
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("CORS policy: Not allowed"));
+    }
+  },
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  credentials: true
+}));
+
 app.use(express.json());
 app.use(cors());
 
